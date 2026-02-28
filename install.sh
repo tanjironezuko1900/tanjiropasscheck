@@ -4,18 +4,18 @@ echo "Installing TanjiroPassCheck requirements..."
 
 sudo apt update
 
-sudo apt install figlet wordlists -y
+sudo apt install figlet wget -y
 
-if [ -f /usr/share/wordlists/rockyou.txt.gz ]; then
+sudo mkdir -p /usr/share/wordlists/
 
-sudo gzip -d /usr/share/wordlists/rockyou.txt.gz
-
-echo "rockyou.txt installed."
-
+# Install rockyou if missing
+if [ ! -f /usr/share/wordlists/rockyou.txt ]; then
+    echo "Installing rockyou.txt..."
+    sudo wget https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt \
+    -O /usr/share/wordlists/rockyou.txt
+    echo "rockyou installed."
 else
-
-echo "rockyou already installed."
-
+    echo "rockyou already installed."
 fi
 
 echo
