@@ -3,7 +3,7 @@
 echo "PASSWORD CHECKING TOOL"
 echo
 
-VERSION="1.0"
+VERSION="1.1"
 AUTHOR="tanjironezuko1900"
 
 ROCKYOU="/usr/share/wordlists/rockyou.txt"
