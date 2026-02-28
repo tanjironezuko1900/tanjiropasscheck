@@ -9,6 +9,7 @@ Author: tanjironezuko1900
 - Password strength rating
 - RockYou password detection
 - Hidden password input
+- Supports Ubuntu and Debian
 
 ## Installation
 
